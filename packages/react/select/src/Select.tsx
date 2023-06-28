@@ -193,13 +193,13 @@ const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
               autoComplete={autoComplete}
               value={value}
               // enable form autofill
-              onChange={(event) => setValue(event.target.value)}
               disabled={disabled}
               id={id}
               onFocus={() => {
                 trigger?.focus();
               }}
               {...rests}
+              onChange={(event) => setValue(event.target.value)}
             >
               {value === undefined ? <option value="" /> : null}
               {Array.from(nativeOptionsSet)}
